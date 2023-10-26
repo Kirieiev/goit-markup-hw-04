@@ -131,6 +131,7 @@ button {
 .header-list {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 
 .header-link {
@@ -147,6 +148,21 @@ button {
 .header-link:hover,
 .header-link:focus {
   color: #404bbf;
+}
+
+.header-list li:first-child::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  position: absolute;
+  bottom: -20px;
+}
+
+.header-list li:first-child {
+  position: relative;
 }
 
 .address-list {
