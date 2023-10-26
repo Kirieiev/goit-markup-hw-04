@@ -141,6 +141,7 @@ button {
   color: #2e2f42;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -165,6 +166,7 @@ button {
 
 .address-info {
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-info:hover,
@@ -178,6 +180,13 @@ button {
   background-color: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-title {
@@ -209,6 +218,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   padding: 16px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -234,7 +244,14 @@ button {
 }
 
 .page-title {
+  margin-top: 8px;
   margin-bottom: 8px;
+}
+
+.benefits-icon {
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
 }
 /* --------------- BENEFITS STYLES /--------------- */
 
@@ -256,11 +273,33 @@ button {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .card-box {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.team-icon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding-top: 8px;
+  margin: 0 auto;
+}
+
+.social-icon {
+  fill: #4d5ae5;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #404bbf;
 }
 /* --------------- TEAM STYLES /--------------- */
 
@@ -281,6 +320,45 @@ button {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-card {
+  /* position: relative; */
+}
+
+.overlay-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-card {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  width: 360px;
+  height: 300px;
+  background-color: #4d5ae5;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover .overlay-card,
+.portfolio-list-item:focus .overlay-card {
+  transform: translateY(0%);
+}
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .second-card-box {
@@ -304,9 +382,46 @@ button {
 
 .page-footer .logo-link {
   margin-bottom: 16px;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .footer-text {
   max-width: 264px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.footer-box {
+  display: flex;
+}
+
+.footer-logo-box {
+  display: block;
+}
+
+.footer-social-media {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+}
+
+.footer-icon-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-link:hover .social-icon,
+.footer-social-link:focus .social-icon {
+  fill: #31d0aa;
+}
+
+.footer-second-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
 /* --------------- FOOTER STYLES /--------------- */
