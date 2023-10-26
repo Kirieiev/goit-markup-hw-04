@@ -138,6 +138,7 @@ button {
 }
 
 .header-link {
+  position: relative;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -153,20 +154,15 @@ button {
   color: #404bbf;
 }
 
-.header-link:first-child::after {
+.studio:after {
+  position: absolute;
   content: '';
   display: block;
   width: 48px;
   height: 4px;
   border-radius: 2px;
   background-color: #404bbf;
-  position: absolute;
-  bottom: -20px;
-}
-
-.header-link {
-  position: relative;
-  color: #404bbf;
+  bottom: -1px;
 }
 
 .address-list {
@@ -201,6 +197,7 @@ button {
   padding-top: 188px;
   padding-bottom: 188px;
   max-width: 1440px;
+  margin: 0 auto;
   background-position: center;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -302,6 +299,8 @@ button {
 }
 
 .social-item {
+  width: 40px;
+  height: 40px;
 }
 
 .card-box {
@@ -315,8 +314,6 @@ button {
   align-items: center;
   gap: 24px;
   padding-top: 8px;
-  width: 40px;
-  height: 40px;
 }
 
 .social-link {
@@ -327,16 +324,17 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
-  fill: #4d5ae5;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #f4f4fd;
 }
 
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  fill: #404bbf;
+.social-link:hover,
+.social-link:focus,
+.social-link:active {
+  background-color: #404bbf;
 }
 /* --------------- TEAM STYLES /--------------- */
 
@@ -432,16 +430,37 @@ button {
 
 .footer-box {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-logo-box {
   display: block;
+  margin-right: 120px;
+}
+
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon {
+  fill: #f4f4fd;
 }
 
 .footer-social-media {
   display: flex;
   flex-direction: column;
-  margin-left: 120px;
 }
 
 .footer-icon-list {
@@ -449,9 +468,10 @@ button {
   gap: 16px;
 }
 
-.footer-social-link:hover .social-icon,
-.footer-social-link:focus .social-icon {
-  fill: #31d0aa;
+.footer-social-link:hover,
+.footer-social-link:focus,
+.footer-social-link:active {
+  background-color: #31d0aa;
 }
 
 .footer-second-text {
@@ -460,5 +480,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  color: #ffffff;
 }
 /* --------------- FOOTER STYLES /--------------- */
