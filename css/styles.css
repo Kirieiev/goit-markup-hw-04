@@ -138,7 +138,6 @@ button {
 }
 
 .header-link {
-  position: relative;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -151,6 +150,11 @@ button {
 
 .header-link:hover,
 .header-link:focus {
+  color: #404bbf;
+}
+
+.studio {
+  position: relative;
   color: #404bbf;
 }
 
